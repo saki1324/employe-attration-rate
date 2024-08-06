@@ -4,10 +4,10 @@ import numpy as np
 import pickle
 
 # Load the model
-clf = pickle.load(open("emp_model.pkl","rb"))
+clf = pickle.load(open("case_study_emp","rb"))
 
 def predict(data):
-    clf = pickle.load(open("emp_model.pkl","rb"))
+    clf = pickle.load(open("case_study_emp","rb"))
     return clf.predict(data)
 
 
@@ -36,4 +36,4 @@ if st.button("Predict Performance Rate"):
     result = clf.predict(
         np.array([[el,tos,top,gr,gr1,1,1,1,1,1]]))
     st.text(result[0])
-st.markdown("Developed by External Guide Avinash Pawar and WBL Intern : Nisarg")
+st.markdown("Developed by External Guide Avinash Pawar and WBL Intern : sakshi patil")
